@@ -1,0 +1,29 @@
+<!-- PYTHON PARA ECONOMISTAS: ESTIMACIÓN DE MONTERCALO DE PI -->
+<h2>Introducción:</h2>
+    <p>Leyendo el programa de estadística de Economía econtré que haríamos una estimación usando el <a href="http://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo">método de montecarlo</a>, lo que me resultó muy interesante, mi objetivo es hacer simulaciones de modelos económicos por lo que mi interés fué inmediato.</p>
+
+    <p>Asi que sin pensarlo me he adelantado y además poniendo en práctica los conocimientos en Python, me he puesto a estimar el problema típico que encontre por internet, estimar el número Pi.</p>
+
+[[MORE]]
+
+<h2>El Problema:</h2>
+
+    <p>Para poder estimar el número Pi, hay que partir de una ecuación que contenga nuestra incógnita, en nuestro caso será el área de un círculo.</p>
+
+    <p>Pensemos en un cuadrado de una unidad de lado, dentro cabrá un <b>círculo de una unidad de diametro y radio 1/2</b>.</p>
+
+    <h3>Por Tanto Tenemos Que:</h3>
+
+        <h4><b>El Área De Una Circulo ( O ) Es:</b></h4>
+
+            <p>O = π · r ² ⇒ (Despejando π) ⇒ π = O / r ²  → (Puesto que: r = ½ → r ² = ¼) Por tanto ⇒ <b>π = 4 · O</b></p>
+
+        <h4><b>El Área De Un Cuadrado ( C ) Es:</b></h4>
+
+            <p>C = L² → (Definimos que: L = 1 → L² = 1²) ⇒ <b>C = 1</b></p>
+
+    <p>Ya tenemos una ecuación para nuestra incógnita, ahora falta plantear el problema.</p><p>La idea es llenar nuestro cuadrado de puntos aleatorios y contar los que caen dentro de la circunferencia, de esta forma tendremos puntos que estan dentro y otros fuera de la circunferencia. Si contamos los puntos que estan dentro de la circunferencia y lo dividimos por el total de puntos tendremos nuestra area (O). Obviamente cuanto mas puntos aleatoreos tengamos mejor será nuestra estimación. El último paso que nos quedará será aplicar la ecuación de pi: π = 4 · Ô (El ^ encima de la O es para diferencia la estimación del valor real.)</p>
+
+<h2>Veamos Esto En Python:</h2>
+    <script src="https://gist.github.com/mmngreco/ada99c7b7b44cc1f7699.js"></script>
+    <figure><img src="https://31.media.tumblr.com/10d5c88cee6fa77796e9dfd78577cefb/tumblr_inline_nkzohaLapq1s0xww1.png" alt="image" /></figure>
